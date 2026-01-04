@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 # 🌾 AgriSmart.Ai – Revolutionizing Agriculture with AI
@@ -179,3 +180,6 @@ Feel free to customize this `README.md` further to align with your project's spe
 ![Model Architecture](model_architecture.jpeg)
 
 
+=======
+# agri_repo
+>>>>>>> f2a8e5b4779c86e969c92c31ef2af0a2c80977d3

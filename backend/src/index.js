@@ -24,18 +24,18 @@ app.use(express.json());
 
 // 🧠 Session middleware
 app.use(session({
-  secret: "yourSecretKey", // ✅ Replace with env-safe secret in prod
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   store: MongoStore.create({
-    mongoUrl: "mongodb://127.0.0.1:27017/agri", // ✅ Your MongoDB URL
-    collectionName: 'sessions',                 // Optional
-    ttl: 60 * 60 // 1 hour
+    mongoUrl: process.env.MONGO_URI,
+    collectionName: 'sessions',
+    ttl: 60 * 60
   }),
   cookie: {
-    maxAge: 1000 * 60 * 60, // 1 hour
+    maxAge: 1000 * 60 * 60,
     httpOnly: true,
-    secure: false // set to true if HTTPS
+    secure: false
   }
 }));
 
